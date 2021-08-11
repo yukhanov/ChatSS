@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SlideCollectionViewCell" customModule="chatSS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="455" height="893"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="455" height="893"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eVY-R3-tvf">
+                        <rect key="frame" x="0.0" y="0.0" width="455" height="893"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="slide1" translatesAutoresizingMaskIntoConstraints="NO" id="Tpq-QD-dgT">
+                                <rect key="frame" x="0.0" y="0.0" width="455" height="893"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ChatSS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WuM-Ae-mRO">
+                                <rect key="frame" x="27" y="100" width="428" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="уашкргуалукрцпжшрукщпркцщушпрщшуцршщпркщцшуркпцр" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6o-9F-wUa">
+                                <rect key="frame" x="27" y="194" width="378" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="127" id="yx0-sL-Eh7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ws-Uv-IWE">
+                                <rect key="frame" x="30" y="346" width="395" height="45"/>
+                                <color key="backgroundColor" red="0.16078431372549018" green="0.50196078431372548" blue="0.72549019607843135" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="ryK-Nm-Uh1"/>
+                                </constraints>
+                                <state key="normal" title="Регистрация">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="registerBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="fZP-rX-UsZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-ML-mck">
+                                <rect key="frame" x="131" y="811" width="192" height="30"/>
+                                <state key="normal" title="Войти"/>
+                                <connections>
+                                    <action selector="authBtnTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="N33-rb-Qft"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="cqA-ML-mck" firstAttribute="leading" secondItem="eVY-R3-tvf" secondAttribute="leading" constant="131" id="9Ts-Su-Fnf"/>
+                            <constraint firstItem="6Ws-Uv-IWE" firstAttribute="leading" secondItem="eVY-R3-tvf" secondAttribute="leading" constant="30" id="9bw-e1-xxQ"/>
+                            <constraint firstItem="6Ws-Uv-IWE" firstAttribute="top" secondItem="S6o-9F-wUa" secondAttribute="bottom" constant="25" id="Cuc-fX-ZV2"/>
+                            <constraint firstItem="WuM-Ae-mRO" firstAttribute="top" secondItem="eVY-R3-tvf" secondAttribute="top" constant="100" id="LN0-iy-IHm"/>
+                            <constraint firstItem="S6o-9F-wUa" firstAttribute="top" secondItem="WuM-Ae-mRO" secondAttribute="bottom" constant="34" id="TsC-rn-8ks"/>
+                            <constraint firstAttribute="trailing" secondItem="WuM-Ae-mRO" secondAttribute="trailing" id="YDI-Y4-AnT"/>
+                            <constraint firstAttribute="bottom" secondItem="cqA-ML-mck" secondAttribute="bottom" constant="52" id="gq0-qx-emE"/>
+                            <constraint firstAttribute="trailing" secondItem="S6o-9F-wUa" secondAttribute="trailing" constant="50" id="mp4-gl-KS7"/>
+                            <constraint firstItem="WuM-Ae-mRO" firstAttribute="leading" secondItem="eVY-R3-tvf" secondAttribute="leading" constant="27" id="oNk-rO-MUC"/>
+                            <constraint firstAttribute="trailing" secondItem="6Ws-Uv-IWE" secondAttribute="trailing" constant="30" id="wmM-yp-zfy"/>
+                            <constraint firstAttribute="trailing" secondItem="cqA-ML-mck" secondAttribute="trailing" constant="132" id="yfp-7D-cvZ"/>
+                            <constraint firstItem="S6o-9F-wUa" firstAttribute="leading" secondItem="eVY-R3-tvf" secondAttribute="leading" constant="27" id="zai-vL-5vD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="eVY-R3-tvf" secondAttribute="trailing" id="HvK-zu-Y0V"/>
+                <constraint firstItem="eVY-R3-tvf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Iwe-Er-hpv"/>
+                <constraint firstAttribute="bottom" secondItem="eVY-R3-tvf" secondAttribute="bottom" id="WuI-yq-S6B"/>
+                <constraint firstItem="eVY-R3-tvf" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hTK-xx-GZB"/>
+            </constraints>
+            <size key="customSize" width="455" height="893"/>
+            <connections>
+                <outlet property="descriptionText" destination="S6o-9F-wUa" id="j5T-O8-oUs"/>
+                <outlet property="enterBtn" destination="cqA-ML-mck" id="68K-qE-IvJ"/>
+                <outlet property="regBtn" destination="6Ws-Uv-IWE" id="fBY-vt-3Hb"/>
+                <outlet property="slideImg" destination="Tpq-QD-dgT" id="Sos-yV-cMQ"/>
+            </connections>
+            <point key="canvasLocation" x="434.05797101449281" y="151.67410714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="slide1" width="1234" height="1851"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
