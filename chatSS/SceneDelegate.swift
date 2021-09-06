@@ -6,20 +6,23 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
     let userDefault = UserDefaults.standard
+    var isLoginned = Auth.auth().currentUser
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 
         
         
-        let isLogin = userDefault.object(forKey: "isLogin") as? Bool ?? false
-        if isLogin {
+        //let isLogin = userDefault.object(forKey: "isLogin") as? Bool ?? false
+        let isLogin = isLoginned
+        if (isLogin != nil) {
             startApp()
         } else {
             startLogin()
@@ -34,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func startLogin() {
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController")
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthViewController")
         self.window?.rootViewController = loginVC
         self.window?.makeKeyAndVisible()
     }

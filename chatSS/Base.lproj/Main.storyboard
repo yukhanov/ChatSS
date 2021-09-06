@@ -27,7 +27,8 @@
         <!--App View Controller-->
         <scene sceneID="2tQ-S7-y1i">
             <objects>
-                <tabBarController storyboardIdentifier="AppViewController" id="LVW-O2-5yM" customClass="AppViewController" customModule="chatSS" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="AppViewController" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="LVW-O2-5yM" customClass="AppViewController" customModule="chatSS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="X9l-WD-0Sr"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vze-lb-npY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -40,7 +41,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OYB-nG-oOL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19" y="899"/>
+            <point key="canvasLocation" x="19" y="804"/>
         </scene>
         <!--Item-->
         <scene sceneID="gnz-44-hrY">
@@ -68,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pk-eq-mmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="886" y="899"/>
+            <point key="canvasLocation" x="912" y="777"/>
         </scene>
         <!--Item-->
         <scene sceneID="9Tt-JY-HbT">
@@ -96,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6p-t8-kxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="913.04347826086962" y="1625.8928571428571"/>
+            <point key="canvasLocation" x="912" y="1459"/>
         </scene>
         <!--Reg View Controller-->
         <scene sceneID="9eB-4O-Hjk">
@@ -133,7 +134,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="X1k-om-0o2">
                                                                 <rect key="frame" x="10" y="3" width="334" height="44"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -156,7 +157,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QOj-h3-Q4I">
                                                                 <rect key="frame" x="10" y="3" width="334" height="44"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -179,7 +180,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Подтвердите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rJv-MF-Vos">
                                                                 <rect key="frame" x="10" y="3" width="334" height="44"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -215,6 +216,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="registerButton:" destination="a6C-rg-NrO" eventType="touchUpInside" id="Lox-9g-8bq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -247,6 +251,10 @@
                             <constraint firstItem="8Ji-Ur-g7R" firstAttribute="top" secondItem="08w-BP-nse" secondAttribute="top" id="y2f-CN-8bt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="X1k-om-0o2" id="upp-C7-dbC"/>
+                        <outlet property="passwordTextField" destination="QOj-h3-Q4I" id="DFY-Vo-gdc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9O-s1-nUc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -287,7 +295,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UpX-dC-CLw">
                                                                 <rect key="frame" x="10" y="3" width="334" height="44"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -310,7 +318,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r7P-1G-XfQ">
                                                                 <rect key="frame" x="10" y="3" width="334" height="44"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
+                                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                             </textField>
                                                         </subviews>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -336,6 +344,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GHi-Ha-FeP">
                                                 <rect key="frame" x="0.0" y="232.5" width="354" height="30"/>
                                                 <state key="normal" title="Нет аккаунта?"/>
+                                                <connections>
+                                                    <action selector="enterButton:" destination="6zn-i1-S42" eventType="touchUpInside" id="Bo6-P2-Ic6"/>
+                                                    <action selector="registerBtnTapped:" destination="6zn-i1-S42" eventType="touchUpInside" id="XgQ-70-6Sq"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pcm-vb-hVC">
                                                 <rect key="frame" x="0.0" y="282.5" width="354" height="30"/>
@@ -350,6 +362,9 @@
                                                         <integer key="value" value="25"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="enterButton:" destination="6zn-i1-S42" eventType="touchUpInside" id="AJJ-hh-UfB"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -382,6 +397,10 @@
                             <constraint firstItem="ZYW-GQ-SEi" firstAttribute="leading" secondItem="Vuk-3M-TAU" secondAttribute="leading" id="vWz-jo-wPD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="UpX-dC-CLw" id="AJK-Ay-qyY"/>
+                        <outlet property="passwordTextField" destination="r7P-1G-XfQ" id="kte-qM-QHv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qX-RK-0bD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
