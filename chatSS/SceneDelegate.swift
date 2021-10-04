@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         
         
-        //let isLogin = userDefault.object(forKey: "isLogin") as? Bool ?? false
-        let isLogin = isLoginned
-        if (isLogin != nil) {
+        let isLogin = userDefault.object(forKey: "isLogin") as? Bool ?? false
+       
+        if isLogin {
             startApp()
         } else {
             startLogin()
@@ -37,7 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
     
     func startLogin() {
-        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthViewController")
+        let loginVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "LoginViewController")
         self.window?.rootViewController = loginVC
         self.window?.makeKeyAndVisible()
     }

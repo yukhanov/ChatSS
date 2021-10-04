@@ -12,6 +12,7 @@ class RegViewController: UIViewController {
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    var delegate: LoginViewControllerDelegate!
 
 
     
@@ -31,4 +32,7 @@ class RegViewController: UIViewController {
         }
     }
     
+    @IBAction func closeBtnTapped(_ sender: Any) {
+        delegate.closeVC()
+    }
 }

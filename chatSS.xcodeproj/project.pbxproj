@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0020FD2A26E6853D00D1848A /* UsersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0020FD2826E6853D00D1848A /* UsersTableViewCell.swift */; };
+		0020FD2B26E6853D00D1848A /* UsersTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0020FD2926E6853D00D1848A /* UsersTableViewCell.xib */; };
 		B8C3EB0C26C3B50000FB7CF2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3EB0B26C3B50000FB7CF2 /* AppDelegate.swift */; };
 		B8C3EB0E26C3B50000FB7CF2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C3EB0D26C3B50000FB7CF2 /* SceneDelegate.swift */; };
 		B8C3EB1326C3B50000FB7CF2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8C3EB1126C3B50000FB7CF2 /* Main.storyboard */; };
@@ -25,6 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0020FD2826E6853D00D1848A /* UsersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewCell.swift; sourceTree = "<group>"; };
+		0020FD2926E6853D00D1848A /* UsersTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UsersTableViewCell.xib; sourceTree = "<group>"; };
 		7BD7D5A190B6F6EFEF2C4A58 /* Pods-chatSS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatSS.debug.xcconfig"; path = "Target Support Files/Pods-chatSS/Pods-chatSS.debug.xcconfig"; sourceTree = "<group>"; };
 		8653A94C87C05AE0EE162D68 /* Pods-chatSS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-chatSS.release.xcconfig"; path = "Target Support Files/Pods-chatSS/Pods-chatSS.release.xcconfig"; sourceTree = "<group>"; };
 		8C66B9D8B73E7256C55C8133 /* Pods_chatSS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_chatSS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0020FD2726E6851800D1848A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0020FD2826E6853D00D1848A /* UsersTableViewCell.swift */,
+				0020FD2926E6853D00D1848A /* UsersTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		0C404D935676798FB847DD2E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +126,7 @@
 		B8C3EB3026C3BB0E00FB7CF2 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0020FD2726E6851800D1848A /* Cells */,
 				B8C3EB4E26C3C48A00FB7CF2 /* Slide */,
 			);
 			path = View;
@@ -224,6 +238,7 @@
 			files = (
 				B8C3EB1826C3B50300FB7CF2 /* LaunchScreen.storyboard in Resources */,
 				B8C3EB5726C3C4CD00FB7CF2 /* SlideCollectionViewCell.xib in Resources */,
+				0020FD2B26E6853D00D1848A /* UsersTableViewCell.xib in Resources */,
 				B8C3EB2126C3B60100FB7CF2 /* GoogleService-Info.plist in Resources */,
 				B8C3EB1526C3B50300FB7CF2 /* Assets.xcassets in Resources */,
 				B8C3EB1326C3B50000FB7CF2 /* Main.storyboard in Resources */,
@@ -283,6 +298,7 @@
 				B8C3EB5626C3C4CD00FB7CF2 /* SlideCollectionViewCell.swift in Sources */,
 				B8C3EB6126C5074800FB7CF2 /* SliderSlides.swift in Sources */,
 				B8C3EB3426C3BBF000FB7CF2 /* LoginViewController.swift in Sources */,
+				0020FD2A26E6853D00D1848A /* UsersTableViewCell.swift in Sources */,
 				B8C3EB6726C508CB00FB7CF2 /* AuthViewController.swift in Sources */,
 				B8C3EB0C26C3B50000FB7CF2 /* AppDelegate.swift in Sources */,
 				B8C3EB6A26C50C2E00FB7CF2 /* AppViewController.swift in Sources */,

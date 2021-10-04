@@ -7,10 +7,19 @@
 
 import UIKit
 
+protocol LoginViewControllerDelegate {
+    func openRegVC()
+    func openAppVC()
+    func closeVC()
+    
+}
+
 class LoginViewController: UIViewController {
     
     var collectionView: UICollectionView!
     let slidesSlider = SliderSlides()
+    var authVC: AuthViewController!
+    var regVC: RegViewController!
     var slides: [Slides] = []
 
     override func viewDidLoad() {
@@ -42,13 +51,45 @@ class LoginViewController: UIViewController {
 
 }
 
-extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSource, LoginViewControllerDelegate, UICollectionViewDelegateFlowLayout {
+    func closeVC() {
+        if authVC != nil {
+            authVC.view.removeFromSuperview()
+            authVC = nil
+        }
+        if regVC != nil {
+            regVC.view.removeFromSuperview()
+            regVC = nil
+        }
+        
+    }
+    
+   
+    
+    func openAppVC() {
+        if authVC == nil {
+            authVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "AuthViewController")
+        }
+        
+        authVC.delegate = self
+        self.view.insertSubview(authVC.view, at: 1)
+    }
+    
+    func openRegVC() {
+        if regVC == nil {
+            regVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "RegViewController")
+        }
+        regVC.delegate = self
+        self.view.insertSubview(regVC.view, at: 1)
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return slides.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SlideCollectionViewCell.reuseId, for: indexPath) as! SlideCollectionViewCell
+        cell.delegate = self
         let slide = slides[indexPath.row]
         cell.configure(slide: slide)
         return cell
@@ -57,4 +98,12 @@ extension LoginViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return self.view.frame.size
     }
+    
+//    class LoginViewController: LoginViewControllerDelegate {
+//        func openRegVC() {
+//            print(1)
+//        }
+//
+//
+//    }
 }

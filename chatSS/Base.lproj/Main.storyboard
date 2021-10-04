@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -46,7 +46,7 @@
         <!--Item-->
         <scene sceneID="gnz-44-hrY">
             <objects>
-                <viewController id="WDb-Dw-nzi" sceneMemberID="viewController">
+                <viewController id="WDb-Dw-nzi" customClass="UsersTableViewController" customModule="chatSS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l6O-TE-U2X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,7 +69,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Pk-eq-mmh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="777"/>
+            <point key="canvasLocation" x="885.50724637681162" y="803.57142857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="9Tt-JY-HbT">
@@ -97,7 +97,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6p-t8-kxL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="912" y="1459"/>
+            <point key="canvasLocation" x="912" y="1525"/>
         </scene>
         <!--Reg View Controller-->
         <scene sceneID="9eB-4O-Hjk">
@@ -229,6 +229,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeBtnTapped:" destination="a6C-rg-NrO" eventType="touchUpInside" id="phB-2X-aG4"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13333333333333333" green="0.13333333333333333" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -375,6 +378,9 @@
                                         <state key="normal">
                                             <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                                         </state>
+                                        <connections>
+                                            <action selector="closeBtnTapped:" destination="6zn-i1-S42" eventType="touchUpInside" id="zkT-AY-lZe"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

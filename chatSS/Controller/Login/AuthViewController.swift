@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
 class AuthViewController: UIViewController {
+    
+    var delegate: LoginViewControllerDelegate!
 
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -46,4 +48,7 @@ class AuthViewController: UIViewController {
         }
     }
     
+    @IBAction func closeBtnTapped(_ sender: Any) {
+        delegate.closeVC()
+    }
 }
